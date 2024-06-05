@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation })
   <footer className="border-t-[0.5px] border-muted">
     <div className="container py-16 max-w-6xl">
       <div className="grid grid-cols-1 sm:grid-cols-3 items-center place-items-center">
-        <Image src={logo} alt={"Logo"} height={32} width={33} className="mb-4 sm:mb-0" />
+        <Image src={logo} alt={"Logo"} height={32} width={33} className="mb-8 sm:mb-0" />
         <ul className="hidden sm:block sm:space-y-4">
           {menuItems.map((item) => (
             <li key={item.name}>
@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation })
             </li>
           ))}
         </ul>
-        <div className="flex sm:hidden mb-4">
+        <div className="flex sm:hidden mb-8">
           {menuItems.map((item, i) => (
             <Link key={item.name} href={item.href}>
               {i !== 0 && <span className="mx-4 text-muted">/</span>}
@@ -37,8 +37,8 @@ export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation })
             </Link>
           ))}
         </div>
-        <div className="flex flex-col space-y-4">
-          <div className="flex space-x-4 justify-center">
+        <div className="flex flex-col space-y-8 sm:space-y-4">
+          <div className="flex space-x-8 justify-center">
             {contactInformation?.nostr && (
               <ExternalLink link={contactInformation.nostr}>
                 <Icon name="nostr" color="muted" hoverColor="foreground" size="s" />

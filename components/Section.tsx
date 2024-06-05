@@ -5,11 +5,12 @@ interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
   bgColor?: ThemeColor;
 }
 
-type ThemeColor = "background" | "foreground";
+type ThemeColor = "background" | "foreground" | "section";
 
 const colorLookupMap: Record<ThemeColor, string> = {
   background: "bg-background",
   foreground: "bg-foreground",
+  section: "bg-sectionBackground",
 };
 
 export const Section: React.FC<SectionProps> = ({

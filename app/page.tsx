@@ -170,7 +170,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section className="border-t-[0.5px] border-muted">
+      <Section className="border-t-[0.5px] border-muted" bgColor="section">
         <div className="flex flex-col justify-center items-center text-center">
           <Text type="postTitle" className="mb-2">
             Din partner i Bitcoin
