@@ -48,13 +48,13 @@ export default function Home() {
               <Text type="postTitle" className="mb-2 text-center">
                 KONSULTASJON PÅ ALLE OMRÅDER
               </Text>
-              <Text type="h2" className="mb-16 text-center">
+              <Text type="h2" className="mb-4 sm:mb-16 text-center">
                 Vi tilbyr tjenester til bedrifer og privatpersoner
               </Text>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-8 lg:gap-4">
-            <div className="flex flex-col items-center sm:items-start space-y-8">
+            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"shield"} size={"l"} />
               <Text type="h4" className="mb-2">
                 Kald oppbevaring
@@ -64,33 +64,33 @@ export default function Home() {
                 tilbyr multisig-løsninger og personlig veiledning for ekstra sikkerhet og ro.
               </Text>
             </div>
-            <div className="flex flex-col items-center sm:items-start space-y-8">
+            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"briefcase"} size={"l"} />
               <Text type="h4" className="mb-2">
                 Strategi
               </Text>
-              <Text type="small" className="text-left">
+              <Text type="small" className="text-center sm:text-left">
                 Strategisk rådgivning for bedrifter som investerer i Bitcoin. Få innsikt i risiko,
                 skatt, regnskap, sikkerhet og styrets støtte.
               </Text>
             </div>
-            <div className="flex flex-col items-center sm:items-start space-y-8">
+            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"zap"} size={"l"} />
               <Text type="h4" className="mb-2">
                 Lightning
               </Text>
-              <Text type="small" className="text-left">
+              <Text type="small" className="text-center sm:text-left">
                 Få raske og kostnadseffektive Bitcoin-transaksjoner med Lightning Network. Vi
                 hjelper med API-integrasjon, sikkerhet, og nodeadministrasjon for full kontroll over
                 dine midler
               </Text>
             </div>
-            <div className="flex flex-col items-center sm:items-start space-y-8">
+            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"service"} size={"l"} />
               <Text type="h4" className="mb-2">
                 Kundeservice
               </Text>
-              <Text type="small" className="text-left">
+              <Text type="small" className="text-center sm:text-left">
                 Mens Bitcoin mangler kundeservice, tilbyr Satoshi Consult førsteklasses support. Få
                 raske og pålitelige svar fra våre eksperter via møter, kryptert chat og
                 videokonferanser.

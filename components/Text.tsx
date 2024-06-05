@@ -33,15 +33,15 @@ const tagLookup: Record<TextType, string> = {
 };
 
 const tagStylesLookup: Record<TextType, string> = {
-  h1: "text-6xl font-bold leading-115",
-  h2: "text-5xl font-bold leading-115",
+  h1: "text-4xl sm:text-6xl font-bold leading-115",
+  h2: "text-3xl font-bold leading-115",
   h3: "text-2xl font-bold",
   h4: "text-xl font-bold",
   normal: "text-base text-muted",
   small: "text-sm text-muted",
-  large: "text-2xl text-muted",
+  large: "text-xl sm:text-2xl text-muted",
   strong: "text-base font-semibold",
-  link: "text-sm text-muted hover:text-foreground font-semibold",
+  link: "text-sm text-muted hover:text-foreground font-semibold inline-block",
   postTitle: "text-base font-semibold text-muted uppercase",
 };
 

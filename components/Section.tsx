@@ -18,6 +18,6 @@ export const Section: React.FC<SectionProps> = ({
   bgColor = "background",
 }) => (
   <section className={cn(colorLookupMap[bgColor], className)}>
-    <div className="container py-24 max-w-6xl">{children}</div>
+    <div className="container py-16 sm:py-24 max-w-6xl">{children}</div>
   </section>
 );
