@@ -5,13 +5,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --section-background: #f4f5f6;
+  --muted: #777e90;
+  --border: #e6e8ec;
+  --primary: #fd9702;
+  --green: #45b36b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #141416;
     --foreground: #ededed;
+    --section-background: #23262f;
+    --muted: #777e90;
+    --border: #fcfcfd;
+    --primary: #fd9702;
+    --green: #45b36b;
   }
+}
+
+html {
+  font-family: var(--font-inter);
 }
 
 body {

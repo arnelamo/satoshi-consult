@@ -1,0 +1,152 @@
+{
+  "extends": ["next", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    /*
+     * eslint rules https://eslint.org/docs/rules
+  Notes:
+  https://eslint.org/docs/rules/no-dupe-args
+  https://eslint.org/docs/rules/no-sequences
+  import/no-nodejs-modules
+  no-internal-modules.md
+  sort-imports replace with autofixer https://github.com/eslint/eslint/issues/11542
+  */
+    /*
+     * Category: Possible Errors
+     */
+    // Disallow await inside of for loops
+    "no-await-in-loop": "warn",
+    // Disallow constant expressions in conditions, i.e. if (true)
+    "no-constant-condition": "warn",
+    // Disallow assignments that can lead to race conditions due to usage of await or yield
+    "require-atomic-updates": "warn",
+    /*
+     * Category: Best Practices
+     */
+    // Disallows unnecessary return await (small performance increase) - see https://jakearchibald.com/2017/await-vs-return-vs-return-await/
+    "no-return-await": "warn",
+    "no-self-compare": "warn",
+    "no-unmodified-loop-condition": "warn",
+    // Disallow unnecessary concatenation of strings, i.e. "a" + "b" => "ab"
+    "no-useless-concat": "warn",
+    "no-useless-return": "warn",
+    // Disallow with statements ( with(something) {} ), use descructuring instead
+    "no-with": "error",
+    // Require using Error objects as Promise rejection reasons
+    "prefer-promise-reject-errors": "warn",
+    "prefer-regex-literals": "warn",
+    // Disallow Yoda conditions ("red" === color => color === "red")
+    "yoda": [
+      "warn",
+      "never",
+      {
+        "exceptRange": true
+      }
+    ],
+    // Disallow labels that are variable names
+    "no-label-var": "error",
+    // Disallow specific global variables
+    "no-restricted-globals": [
+      "error",
+      "event"
+    ],
+    "new-parens": [
+      "warn",
+      "always"
+    ],
+    // Disallows: const foo = bar = 0
+    "no-multi-assign": "warn",
+    // Disallow Object constructors, new Object() => {}
+    "no-new-object": "warn",
+    /*
+     * Disallow newline of single-line statements if (a) \n statement; (if, else, while, do-while and for)
+     * Before disabling this rule, read https://www.imperialviolet.org/2014/02/22/applebug.html
+     */
+    "nonblock-statement-body-position": "error",
+    "one-var": [
+      "warn",
+      "never"
+    ],
+    "prefer-exponentiation-operator": "warn",
+    // Prefer use of an object spread over Object.assign
+    "prefer-object-spread": "warn",
+    "spaced-comment": [
+      "warn",
+      "always"
+    ],
+    /*
+     * Category: ECMAScript 6
+     */
+    // Use braces in arrow function body only when needed () => { return value; } => () => value
+    "arrow-body-style": [
+      "warn",
+      "as-needed"
+    ],
+    "no-useless-computed-key": "warn",
+    "no-useless-rename": "warn",
+    "no-var": "error",
+    "object-shorthand": [
+      "warn",
+      "always"
+    ],
+    // Prefer arrow functions over function expressions in callbacks handle(function (event) { ... }) => handle((event) => {...})
+    "prefer-arrow-callback": "warn",
+    "prefer-const": "warn",
+    // Disallow parseInt() and Number.parseInt() in favor of binary, octal, and hexadecimal literals
+    "prefer-numeric-literals": "warn",
+    // Suggest using the rest parameters instead of arguments
+    "prefer-rest-params": "warn",
+    // Suggest using spread syntax instead of .apply()
+    "prefer-spread": "warn",
+    /*
+     * Plugin: Prettier
+     * Consider using https://github.com/prettier/prettier-eslint for better control?
+     */
+    "prettier/prettier": [
+      "warn",
+      {
+        "printWidth": 100,
+        "useTabs": false,
+        "tabWidth": 2,
+        "endOfLine": "auto",
+        "trailingComma": "all"
+      }
+    ],
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ],
+          "object"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": false
+        }
+      }
+    ],
+    "import/exports-last": "off",
+    "import/newline-after-import": [
+      "warn",
+      {
+        "count": 1
+      }
+    ],
+    "import/no-self-import": "warn",
+    "import/no-useless-path-segments": [
+      "warn",
+      {
+        "noUselessIndex": true
+      }
+    ],
+    "react/prop-types": "off"
+  }
+}

@@ -1,100 +1,192 @@
 import Image from "next/image";
 
+import { Button } from "@/components/Button";
+import { Icon } from "@/components/Icon";
+import { Section } from "@/components/Section";
+import { Text } from "@/components/Text";
+
+import coldCardQ from "../public/coldcard.png";
+import terminal from "../public/terminal.png";
+import walletPhone from "../public/walletOfSatoshiPhone.png";
+
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm text-center sm:text-left">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div>
+      <Section>
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
+          <div className="flex flex-col md:max-w-[500px] items-center md:items-start mb-16 md:mb-0">
+            <Text type="postTitle" className="mb-2">
+              Bedre kunnskap. Tryggere investeringer.
+            </Text>
+            <Text type="h1" className="mb-4">
+              Ekspertise på Bitcoin, for alle.
+            </Text>
+            <Text type="normal" className="mb-7">
+              Våre eksperter gir deg verktøyene du trenger for trygg oppbevaring og en vellykket
+              Bitcoin-strategi.
+            </Text>
+            <Button className="w-fit" size={"lg"} variant={"primary"}>
+              Book møte
+            </Button>
+          </div>
+          <div className="relative h-[500px] flex justify-center">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={walletPhone}
+              alt="iPhone med Wallet of Satoshi-appen åpen"
+              fill
+              style={{
+                objectFit: "contain",
+              }}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file-text.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </Section>
+      <Section>
+        <div>
+          <div className="flex flex-col items-center mb-8">
+            <div className="max-w-[650px]">
+              <Text type="postTitle" className="mb-2 text-center">
+                KONSULTASJON PÅ ALLE OMRÅDER
+              </Text>
+              <Text type="h2" className="mb-16 text-center">
+                Vi tilbyr tjenester til bedrifer og privatpersoner
+              </Text>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-8 lg:gap-4">
+            <div className="flex flex-col items-center sm:items-start space-y-8">
+              <Icon name={"shield"} size={"l"} />
+              <Text type="h4" className="mb-2">
+                Kald oppbevaring
+              </Text>
+              <Text type="small" className="text-center sm:text-left">
+                Fra børs til sikker kaldlagring – trygg Bitcoin-overføring uten hackingfare. Vi
+                tilbyr multisig-løsninger og personlig veiledning for ekstra sikkerhet og ro.
+              </Text>
+            </div>
+            <div className="flex flex-col items-center sm:items-start space-y-8">
+              <Icon name={"briefcase"} size={"l"} />
+              <Text type="h4" className="mb-2">
+                Strategi
+              </Text>
+              <Text type="small" className="text-left">
+                Strategisk rådgivning for bedrifter som investerer i Bitcoin. Få innsikt i risiko,
+                skatt, regnskap, sikkerhet og styrets støtte.
+              </Text>
+            </div>
+            <div className="flex flex-col items-center sm:items-start space-y-8">
+              <Icon name={"zap"} size={"l"} />
+              <Text type="h4" className="mb-2">
+                Lightning
+              </Text>
+              <Text type="small" className="text-left">
+                Få raske og kostnadseffektive Bitcoin-transaksjoner med Lightning Network. Vi
+                hjelper med API-integrasjon, sikkerhet, og nodeadministrasjon for full kontroll over
+                dine midler
+              </Text>
+            </div>
+            <div className="flex flex-col items-center sm:items-start space-y-8">
+              <Icon name={"service"} size={"l"} />
+              <Text type="h4" className="mb-2">
+                Kundeservice
+              </Text>
+              <Text type="small" className="text-left">
+                Mens Bitcoin mangler kundeservice, tilbyr Satoshi Consult førsteklasses support. Få
+                raske og pålitelige svar fra våre eksperter via møter, kryptert chat og
+                videokonferanser.
+              </Text>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Section>
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
+          <div
+            className="flex flex-col md:max-w-[5
+            600px] items-center md:items-start mb-16 md:mb-0"
+          >
+            <Text type="h2" className="mb-8 max-w-[500px]">
+              Kald oppbevaring - sov godt om natten
+            </Text>
+            <Text type="large">
+              Vi tilbyr krypterte videokonferanser, hjemmebesøk, eller møter på nøytral plass. Ved
+              bruk av multisig-løsninger, som krever to av tre nøkler, sikrer vi dine verdier mot
+              hacking. Med ekstra trygghet sover du godt om natten.
+            </Text>
+          </div>
+          <div className="relative h-[500px] flex justify-center">
+            <Image
+              src={coldCardQ}
+              alt="iPhone med Wallet of Satoshi-appen åpen"
+              fill
+              style={{
+                objectFit: "contain",
+              }}
+            />
+          </div>
+        </div>
+      </Section>
+      <Section>
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
+          <div className="relative h-[500px] flex justify-center -rotate-[25deg]">
+            <Image
+              src={terminal}
+              alt="Bitcoin Lightning betalingsterminal"
+              fill
+              style={{
+                objectFit: "contain",
+              }}
+            />
+          </div>
+          <div className="flex flex-col items-center md:items-start mb-16 md:mb-0">
+            <Text type="h2" className="mb-8">
+              Onboarding til Bitcoin Lightning Network
+            </Text>
+            <Text type="large" className="mb-8">
+              Øk kundebasen din med lynraske betalinger via Lightning Network!
+            </Text>
+            <ul className="space-y-4">
+              <li className="flex items-center">
+                <Icon name={"check"} size={"m"} color="green" />
+                <Text className="ml-4">
+                  Vi hjelper deg med å integrere Lightning API-er for sømløse og raske
+                  transaksjoner.
+                </Text>
+              </li>
+              <li className="flex items-center">
+                <Icon name={"check"} size={"m"} color="green" />
+                <Text className="ml-4">
+                  Få full kontroll over dine midler med selvoppbevarte Lightning-noder og wallets.
+                </Text>
+              </li>
+              <li className="flex items-center">
+                <Icon name={"check"} size={"m"} color="green" />
+                <Text className="ml-4">
+                  Vi tilbyr omfattende administrasjon av Lightning-noder, inkludert overvåkning,
+                  vedlikehold og optimalisering.
+                </Text>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+      <Section className="border-t-[0.5px] border-muted">
+        <div className="flex flex-col justify-center items-center text-center">
+          <Text type="postTitle" className="mb-2">
+            Din partner i Bitcoin
+          </Text>
+          <Text type="h2" className="mb-8 max-w-[640px]">
+            Ta steget inn i Bitcoin-revolusjonen!
+          </Text>
+          <Text type="normal" className="mb-8 max-w-[640px]">
+            Opplev ekspertveiledning, fra Bitcoin-selvoppbevaring til Lightning Network-integrasjon.
+            Book et møte i dag og løft din virksomhet med våre skreddersydde løsninger og workshops.
+          </Text>
+          <Button size={"lg"} variant={"primary"}>
+            Book møte
+          </Button>
+        </div>
+      </Section>
     </div>
   );
 }
