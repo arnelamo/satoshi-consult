@@ -93,9 +93,9 @@ const iconSizeMap: Record<IconSize, iconSizeProps> = {
 };
 
 const colorMap: Record<IconColor, string> = {
-  foreground: "var(--foreground)",
-  muted: "var(--muted)",
-  green: "var(--green)",
+  foreground: "hsl(var(--foreground))",
+  muted: "hsl(var(--muted))",
+  green: "hsl(var(--green))",
 };
 
 export const Icon: React.FC<IconProps> = ({ name, color, size, hoverColor }) => {
@@ -105,6 +105,7 @@ export const Icon: React.FC<IconProps> = ({ name, color, size, hoverColor }) => 
   const hoverFill = colorMap[hoverColor || "foreground"];
 
   const handleMouseEnter = () => {
+    console.log({ color, hoverColor });
     setFill(hoverFill);
   };
 

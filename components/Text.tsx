@@ -33,9 +33,9 @@ const tagLookup: Record<TextType, string> = {
 };
 
 const tagStylesLookup: Record<TextType, string> = {
-  h1: "text-4xl sm:text-6xl font-bold leading-115",
-  h2: "text-3xl font-bold leading-115",
-  h3: "text-2xl font-bold",
+  h1: "text-4xl sm:text-6xl font-bold leading-[1.1] sm:leading-[1.1] antialiased",
+  h2: "text-3xl sm:text-5xl font-bold leading-[1.1] sm:leading-[1.1] antialiased",
+  h3: "text-2xl font-bold antialiased",
   h4: "text-xl font-bold",
   normal: "text-base text-muted",
   small: "text-sm text-muted",
@@ -46,7 +46,7 @@ const tagStylesLookup: Record<TextType, string> = {
 };
 
 export const Text: React.FC<TextProps> = ({ className, type = "normal", children }) => {
-  const Tag = `h${type}` as keyof JSX.IntrinsicElements;
+  const Tag = tagLookup[type] as keyof JSX.IntrinsicElements;
 
   const baseStyles = "block";
   const typeStyles = `${tagStylesLookup[type]}`;

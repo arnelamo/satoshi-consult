@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation })
     <div className="container py-16 max-w-6xl">
       <div className="grid grid-cols-1 sm:grid-cols-3 items-center place-items-center">
         <Image src={logo} alt={"Logo"} height={32} width={33} className="mb-8 sm:mb-0" />
-        <ul className="hidden sm:block sm:space-y-4">
+        <ul className="hidden sm:block sm:space-y-2">
           {menuItems.map((item) => (
             <li key={item.name}>
               <Link href={item.href}>

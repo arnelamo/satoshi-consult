@@ -125,12 +125,12 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
           <div className="flex space-x-4 pt-4 justify-center">
             {contactInformation?.nostr && (
               <ExternalLink link={contactInformation.nostr}>
-                <Icon name="nostr" color="foreground" size="s" />
+                <Icon name="nostr" color="muted" size="s" />
               </ExternalLink>
             )}
             {contactInformation?.twitter && (
               <ExternalLink link={contactInformation.twitter}>
-                <Icon name="twitter" color="foreground" size="s" />
+                <Icon name="twitter" color="muted" size="s" />
               </ExternalLink>
             )}
           </div>
