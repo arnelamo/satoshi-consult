@@ -7,6 +7,7 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { Section } from "@/components/Section";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/ui/button";
 import {
@@ -81,14 +82,16 @@ export function ContactForm() {
   return searchParams.has("confirmation") ? (
     <ConfirmationMessage />
   ) : (
-    <div className="container max-w-screen-md py-16 mx-auto space-y-16">
-      <div className="space-y-4">
-        <Text type="h2">Kontaktskjema</Text>
+    <Section maxWidth="xl">
+      <div className="space-y-4 mb-8">
+        <Text type="h2">La oss høre fra deg</Text>
         <Text>
-          Har du spørsmål eller ønsker å komme i kontakt med oss? Send oss en melding, så tar vi
-          kontakt med deg.
+          Fyll ut kontaktskjemaet, så tar vi kontakt for å skreddersy løsninger som passer akkurat
+          dine behov. Ikke vent – ta det første steget mot en tryggere og mer lønnsom
+          bitcoin-fremtid i dag!
         </Text>
       </div>
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-4 w-full">
           <div className="grid md:grid-cols-2 gap-8">
@@ -154,7 +157,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>Melding</FormLabel>
                 <FormControl>
-                  <Textarea {...field} required rows={10} />
+                  <Textarea {...field} required rows={5} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -163,6 +166,7 @@ export function ContactForm() {
           <Button type="submit">SEND</Button>
         </form>
       </Form>
-    </div>
+      {/* </div> */}
+    </Section>
   );
 }
