@@ -1,16 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, ReactNode } from "react";
+import React, { useState, ReactNode, useEffect } from "react";
 
 import { Paths } from "@/lib/configs";
 
 import { Button } from "./Button";
 import { ExternalLink } from "./ExternalLink";
-// import { Icon } from "./Icon";
-// import { Profile } from "./Profile";
-// import { SheetCart } from "./SheetCart";
-// import { Button } from "./ui/button";
 import { Icon } from "./Icon";
 import { Text } from "./Text";
 import { ContactInformation, MenuItem, contactInformation, inter } from "../app/layout";
@@ -27,6 +23,18 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Disable scrolling when the menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="w-full">
