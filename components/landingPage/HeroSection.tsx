@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+
+import { Paths } from "@/lib/configs";
 
 import walletPhone from "../../public/walletOfSatoshiPhone.png";
 import { Button } from "../Button";
@@ -23,9 +26,11 @@ export function HeroSection() {
             Våre eksperter gir deg verktøyene du trenger for trygg oppbevaring og en vellykket
             Bitcoin-strategi.
           </Text>
-          <Button className="w-fit" size={"lg"} variant={"primary"}>
-            Book møte
-          </Button>
+          <Link href={Paths.KONTAKT} passHref>
+            <Button className="w-fit" size={"lg"} variant={"primary"}>
+              Book møte
+            </Button>
+          </Link>
         </div>
         <EaseIn fromDirection="bottom" offset={20}>
           <div className="relative h-[500px] flex justify-center">

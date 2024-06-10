@@ -9,7 +9,7 @@ import { Button } from "./Button";
 import { ExternalLink } from "./ExternalLink";
 import { Icon } from "./Icon";
 import { Text } from "./Text";
-import { ContactInformation, MenuItem, contactInformation, inter } from "../app/layout";
+import { ContactInformation, MenuItem, contactInformation } from "../app/layout";
 import logo from "../public/logo_36h.png";
 
 interface HeaderProps {
@@ -72,7 +72,9 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
               </ExternalLink>
             )}
           </li>
-          <Button>Book nå</Button>
+          <Link href={Paths.KONTAKT} passHref>
+            <Button>Book nå</Button>
+          </Link>
         </ul>
         {/* Hamburger Icon */}
         <button

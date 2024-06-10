@@ -1,5 +1,8 @@
 "use client";
+import Link from "next/link";
 import React from "react";
+
+import { Paths } from "@/lib/configs";
 
 import { Button } from "../Button";
 import { Section } from "../Section";
@@ -19,9 +22,11 @@ export function TakeTheStepSection() {
           Opplev ekspertveiledning, fra Bitcoin-selvoppbevaring til Lightning Network-integrasjon.
           Book et møte i dag og løft din virksomhet med våre skreddersydde løsninger og workshops.
         </Text>
-        <Button size={"lg"} variant={"primary"}>
-          Book møte
-        </Button>
+        <Link href={Paths.KONTAKT} passHref>
+          <Button size={"lg"} variant={"primary"}>
+            Book møte
+          </Button>
+        </Link>
       </div>
     </Section>
   );
