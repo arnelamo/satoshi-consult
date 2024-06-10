@@ -6,6 +6,8 @@ import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 import { Section } from "@/components/Section";
 import { Text } from "@/components/Text";
+import { EaseIn } from "@/components/motionWrappers/EaseIn";
+import { Stagger } from "@/components/motionWrappers/Stagger";
 
 import coldCardQ from "../public/coldcard.png";
 import terminal from "../public/terminal.png";
@@ -31,11 +33,7 @@ export default function Home() {
               Book møte
             </Button>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
+          <EaseIn fromDirection="bottom" offset={20}>
             <div className="relative h-[500px] flex justify-center">
               <Image
                 src={walletPhone}
@@ -46,7 +44,7 @@ export default function Home() {
                 }}
               />
             </div>
-          </motion.div>
+          </EaseIn>
         </div>
       </Section>
       <Section>
@@ -61,50 +59,52 @@ export default function Home() {
               </Text>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-8 lg:gap-4">
-            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
-              <Icon name={"shield"} size={"l"} />
-              <Text type="h4" className="mb-2">
-                Kald oppbevaring
-              </Text>
-              <Text type="small" className="text-center sm:text-left">
-                Fra børs til sikker kaldlagring – trygg Bitcoin-overføring uten hackingfare. Vi
-                tilbyr multisig-løsninger og personlig veiledning for ekstra sikkerhet og ro.
-              </Text>
+          <EaseIn>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-8 lg:gap-4">
+              <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+                <Icon name={"shield"} size={"l"} />
+                <Text type="h4" className="mb-2">
+                  Kald oppbevaring
+                </Text>
+                <Text type="small" className="text-center sm:text-left">
+                  Fra børs til sikker kaldlagring – trygg Bitcoin-overføring uten hackingfare. Vi
+                  tilbyr multisig-løsninger og personlig veiledning for ekstra sikkerhet og ro.
+                </Text>
+              </div>
+              <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+                <Icon name={"briefcase"} size={"l"} />
+                <Text type="h4" className="mb-2">
+                  Strategi
+                </Text>
+                <Text type="small" className="text-center sm:text-left">
+                  Strategisk rådgivning for bedrifter som investerer i Bitcoin. Få innsikt i risiko,
+                  skatt, regnskap, sikkerhet og styrets støtte.
+                </Text>
+              </div>
+              <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+                <Icon name={"zap"} size={"l"} />
+                <Text type="h4" className="mb-2">
+                  Lightning
+                </Text>
+                <Text type="small" className="text-center sm:text-left">
+                  Få raske og kostnadseffektive Bitcoin-transaksjoner med Lightning Network. Vi
+                  hjelper med API-integrasjon, sikkerhet, og nodeadministrasjon for full kontroll
+                  over dine midler
+                </Text>
+              </div>
+              <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+                <Icon name={"service"} size={"l"} />
+                <Text type="h4" className="mb-2">
+                  Kundeservice
+                </Text>
+                <Text type="small" className="text-center sm:text-left">
+                  Mens Bitcoin mangler kundeservice, tilbyr Satoshi Consult førsteklasses support.
+                  Få raske og pålitelige svar fra våre eksperter via møter, kryptert chat og
+                  videokonferanser.
+                </Text>
+              </div>
             </div>
-            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
-              <Icon name={"briefcase"} size={"l"} />
-              <Text type="h4" className="mb-2">
-                Strategi
-              </Text>
-              <Text type="small" className="text-center sm:text-left">
-                Strategisk rådgivning for bedrifter som investerer i Bitcoin. Få innsikt i risiko,
-                skatt, regnskap, sikkerhet og styrets støtte.
-              </Text>
-            </div>
-            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
-              <Icon name={"zap"} size={"l"} />
-              <Text type="h4" className="mb-2">
-                Lightning
-              </Text>
-              <Text type="small" className="text-center sm:text-left">
-                Få raske og kostnadseffektive Bitcoin-transaksjoner med Lightning Network. Vi
-                hjelper med API-integrasjon, sikkerhet, og nodeadministrasjon for full kontroll over
-                dine midler
-              </Text>
-            </div>
-            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
-              <Icon name={"service"} size={"l"} />
-              <Text type="h4" className="mb-2">
-                Kundeservice
-              </Text>
-              <Text type="small" className="text-center sm:text-left">
-                Mens Bitcoin mangler kundeservice, tilbyr Satoshi Consult førsteklasses support. Få
-                raske og pålitelige svar fra våre eksperter via møter, kryptert chat og
-                videokonferanser.
-              </Text>
-            </div>
-          </div>
+          </EaseIn>
         </div>
       </Section>
       <Section>
@@ -122,31 +122,35 @@ export default function Home() {
               hacking. Med ekstra trygghet sover du godt om natten.
             </Text>
           </div>
-          <div className="relative h-[500px] flex justify-center">
-            <Image
-              src={coldCardQ}
-              alt="iPhone med Wallet of Satoshi-appen åpen"
-              fill
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </div>
+          <EaseIn fromDirection="bottom" offset={20}>
+            <div className="relative h-[500px] flex justify-center">
+              <Image
+                src={coldCardQ}
+                alt="Coldcard Q"
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+          </EaseIn>
         </div>
       </Section>
       {/* overflow-x-hidden pga rotate skyver elementet utenfor */}
       <Section className="overflow-x-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
-          <div className="relative h-[500px] flex justify-center -rotate-[25deg]">
-            <Image
-              src={terminal}
-              alt="Bitcoin Lightning betalingsterminal"
-              fill
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </div>
+          <EaseIn fromDirection="bottom" offset={20}>
+            <div className="relative h-[500px] flex justify-center -rotate-[25deg]">
+              <Image
+                src={terminal}
+                alt="Bitcoin Lightning betalingsterminal"
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+          </EaseIn>
           <div className="flex flex-col items-center md:items-start mb-16 md:mb-0">
             <Text type="h2" className="mb-8">
               Onboarding til Bitcoin Lightning Network
@@ -154,28 +158,29 @@ export default function Home() {
             <Text type="large" className="mb-8">
               Øk kundebasen din med lynraske betalinger via Lightning Network!
             </Text>
-            <ul className="space-y-4">
-              <li className="flex items-center">
+
+            <Stagger className="space-y-4">
+              <div className="flex items-center">
                 <Icon name={"check"} size={"m"} color="green" />
                 <Text className="ml-4">
                   Vi hjelper deg med å integrere Lightning API-er for sømløse og raske
                   transaksjoner.
                 </Text>
-              </li>
-              <li className="flex items-center">
+              </div>
+              <div className="flex items-center">
                 <Icon name={"check"} size={"m"} color="green" />
                 <Text className="ml-4">
                   Få full kontroll over dine midler med selvoppbevarte Lightning-noder og wallets.
                 </Text>
-              </li>
-              <li className="flex items-center">
+              </div>
+              <div className="flex items-center">
                 <Icon name={"check"} size={"m"} color="green" />
                 <Text className="ml-4">
                   Vi tilbyr omfattende administrasjon av Lightning-noder, inkludert overvåkning,
                   vedlikehold og optimalisering.
                 </Text>
-              </li>
-            </ul>
+              </div>
+            </Stagger>
           </div>
         </div>
       </Section>
