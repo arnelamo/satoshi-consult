@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import { Button } from "@/components/Button";
@@ -29,16 +31,22 @@ export default function Home() {
               Book møte
             </Button>
           </div>
-          <div className="relative h-[500px] flex justify-center">
-            <Image
-              src={walletPhone}
-              alt="iPhone med Wallet of Satoshi-appen åpen"
-              fill
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="relative h-[500px] flex justify-center">
+              <Image
+                src={walletPhone}
+                alt="iPhone med Wallet of Satoshi-appen åpen"
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+          </motion.div>
         </div>
       </Section>
       <Section>
@@ -126,7 +134,8 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section>
+      {/* overflow-x-hidden pga rotate skyver elementet utenfor */}
+      <Section className="overflow-x-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
           <div className="relative h-[500px] flex justify-center -rotate-[25deg]">
             <Image

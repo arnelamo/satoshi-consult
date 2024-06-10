@@ -29,8 +29,8 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
   };
 
   return (
-    <header className="w-full relative">
-      <div className="container max-w-6xl flex items-center justify-between h-12 py-16">
+    <header className="w-full">
+      <nav className="container max-w-6xl flex items-center justify-between h-12 py-16">
         {/* <div className="md:hidden">{pathname === Paths.NETTBUTIKK ? <SheetCart /> : null}</div> */}
         {/* Hamburger Icon */}
         <Link href="/">
@@ -39,34 +39,34 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
             <span className="text-2xl font-semibold ml-">Satoshi Consult</span>
           </div>
         </Link>
-        <nav>
-          <ul className="hidden md:flex md:space-x-12 md:items-center">
-            {menuItems.map((item) => (
-              <li key={item.name}>
-                <Link href={item.href} passHref>
-                  <Text type={"link"}>{item.name}</Text>
-                </Link>
-              </li>
-            ))}
-            {/* <li>{pathname === Paths.NETTBUTIKK ? <SheetCart /> : null}</li>
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex md:space-x-12 md:items-center">
+          {menuItems.map((item) => (
+            <li key={item.name}>
+              <Link href={item.href} passHref>
+                <Text type={"link"}>{item.name}</Text>
+              </Link>
+            </li>
+          ))}
+          {/* <li>{pathname === Paths.NETTBUTIKK ? <SheetCart /> : null}</li>
             <Profile /> */}
-            <li>
-              {contactInformation?.nostr && (
-                <ExternalLink link={contactInformation.nostr}>
-                  <Icon name="nostr" color="muted" size="s" hoverColor="foreground" />
-                </ExternalLink>
-              )}
-            </li>
-            <li>
-              {contactInformation?.twitter && (
-                <ExternalLink link={contactInformation.twitter}>
-                  <Icon name="twitter" color="muted" size="s" />
-                </ExternalLink>
-              )}
-            </li>
-            <Button>Book nå</Button>
-          </ul>
-        </nav>
+          <li>
+            {contactInformation?.nostr && (
+              <ExternalLink link={contactInformation.nostr}>
+                <Icon name="nostr" color="muted" size="s" hoverColor="foreground" />
+              </ExternalLink>
+            )}
+          </li>
+          <li>
+            {contactInformation?.twitter && (
+              <ExternalLink link={contactInformation.twitter}>
+                <Icon name="twitter" color="muted" size="s" />
+              </ExternalLink>
+            )}
+          </li>
+          <Button>Book nå</Button>
+        </ul>
+        {/* Hamburger Icon */}
         <button
           className="md:hidden flex top-0 right-0 z-20 relative w-10 h-10 text-foreground focus:outline-none"
           onClick={toggleMenu}
@@ -89,7 +89,8 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
             ></span>
           </div>
         </button>
-      </div>
+      </nav>
+      {/* Mobile Menu */}
       <nav
         className={`fixed flex flex-col top-0 left-0 w-full p-10 z-10 h-screen pt-24 bg-background bg-opacity-100 transform delay-100 transition-all duration-200 ${
           isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
