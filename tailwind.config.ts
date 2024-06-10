@@ -53,6 +53,7 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         green: "hsl(var(--green))",
+        sectionBackgruond: "hsl(var(--section-background))",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -11,7 +11,7 @@ import { Stagger } from "../motionWrappers/Stagger";
 
 export function LightningSection() {
   return (
-    <Section className="overflow-x-hidden">
+    <Section className="overflow-x-hidden bg-sectionBackgruond">
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
         <EaseIn fromDirection="bottom" offset={20}>
           <div className="relative h-[500px] flex justify-center -rotate-[25deg]">
