@@ -6,6 +6,7 @@ import { Text } from "@/components/Text";
 
 import { ExternalLink } from "./ExternalLink";
 import { Icon } from "./Icon";
+import { ModeToggle } from "./ModeToggle";
 import logo from "../public/logo_36h.png";
 
 interface FooterProps {
@@ -49,6 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation })
                 <Icon name="twitter" color="muted" hoverColor="foreground" size="s" />
               </ExternalLink>
             )}
+            <ModeToggle />
           </div>
           <Text type="small">2024 @ Satoshi Consult</Text>
         </div>
