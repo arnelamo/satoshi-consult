@@ -16,7 +16,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation }) => (
   <footer className="border-t-[0.5px] border-muted">
-    <div className="container py-16 max-w-6xl">
+    <div className="container py-10 max-w-6xl">
       <div className="grid grid-cols-1 sm:grid-cols-3 items-center place-items-center">
         <Image src={logo} alt={"Logo"} height={32} width={33} className="mb-8 sm:mb-0" />
         <ul className="hidden sm:block sm:space-y-2">
