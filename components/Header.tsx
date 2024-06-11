@@ -50,7 +50,7 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex md:space-x-12 md:items-center">
           {menuItems.map((item) => (
-            <li key={item.name}>
+            <li key={item.name} className="">
               <Link href={item.href} passHref>
                 <Text type={"link"}>{item.name}</Text>
               </Link>
