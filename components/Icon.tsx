@@ -105,7 +105,6 @@ export const Icon: React.FC<IconProps> = ({ name, color, size, hoverColor }) => 
   const hoverFill = colorMap[hoverColor || "foreground"];
 
   const handleMouseEnter = () => {
-    console.log({ color, hoverColor });
     setFill(hoverFill);
   };
 
