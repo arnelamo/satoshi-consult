@@ -17,7 +17,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation }) => (
   <footer className="border-t-[0.5px] border-muted">
     <div className="container py-10 max-w-6xl">
-      <div className="grid grid-cols-3 sm:grid-cols-3 items-center place-items-center">
+      <div className="flex justify-between items-center">
         <Image src={logo} alt={"Logo"} height={32} width={33} />
         {/* <ul className="hidden sm:block sm:space-y-2">
           {menuItems.map((item) => (
@@ -38,9 +38,6 @@ export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation })
             </Link>
           ))}
         </div> */}
-        <div className="mt-2">
-          <ModeToggle />
-        </div>
         {/* <div className="flex flex-col space-y-2 sm:space-y-4 mb-8 sm:mb-0"> */}
         <div className="flex space-x-8 justify-center">
           {contactInformation?.nostr && (
@@ -53,6 +50,9 @@ export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation })
               <Icon name="twitter" color="muted" hoverColor="foreground" size="s" />
             </ExternalLink>
           )}
+        </div>
+        <div className="mt-2">
+          <ModeToggle />
         </div>
         {/* </div> */}
       </div>
