@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description:
     "Satoshi Consult is a consulting firm that specializes in Bitcoin and Lightning network technology.",
   openGraph: {
+    url: "https://satoshiconsult.com",
+    type: "website",
     images: [
       {
         url: "/opengraph-image.jpg",
