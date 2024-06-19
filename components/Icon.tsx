@@ -13,6 +13,7 @@ import { Instagram } from "./Icons/Instagram";
 import { MapPin } from "./Icons/MapPin";
 import { Nostr } from "./Icons/Nostr";
 import { Phone } from "./Icons/Phone";
+import { Presentation } from "./Icons/Presentation";
 import { Service } from "./Icons/Service";
 import { Shield } from "./Icons/Shield";
 import { Trash } from "./Icons/Trash";
@@ -36,7 +37,8 @@ export type IconName =
   | "service"
   | "zap"
   | "shield"
-  | "check";
+  | "check"
+  | "presentation";
 
 export interface InternalIconProps {
   height: number;
@@ -84,6 +86,7 @@ const iconsMap: Record<IconName, React.FC<InternalIconProps>> = {
   shield: Shield,
   zap: Zap,
   check: Check,
+  presentation: Presentation,
 };
 
 const iconSizeMap: Record<IconSize, iconSizeProps> = {

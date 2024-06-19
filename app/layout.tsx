@@ -14,8 +14,8 @@ export type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-  { name: "Tjenester", href: Paths.TJENESTER },
-  { name: "Priser", href: Paths.PRISER },
+  // { name: "Tjenester", href: Paths.TJENESTER },
+  // { name: "Priser", href: Paths.PRISER },
   { name: "Kontakt", href: Paths.KONTAKT },
 ];
 

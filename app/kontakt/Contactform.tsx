@@ -39,8 +39,8 @@ import { cn, convertDateToNorwegian, getCalendarPropsData } from "@/lib/utils";
 // import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@radix-ui/react-select";
 
 // FIX NEW
-export const emailJsServiceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-export const emailJsContactTemplateId = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID!;
+const emailJsServiceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const emailJsContactTemplateId = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID!;
 const emailJsPublicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 const availableTimes = [
@@ -82,6 +82,7 @@ export function ContactForm() {
   const searchParams = useSearchParams();
   const path = usePathname();
   const router = useRouter();
+  console.log(emailJsServiceId, emailJsContactTemplateId, emailJsPublicKey);
 
   // 1. Define form.
   const form = useForm<z.infer<typeof formSchema>>({

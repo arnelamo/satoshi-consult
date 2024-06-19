@@ -16,12 +16,12 @@ export function ConsultationSection() {
               KONSULTASJON PÅ ALLE OMRÅDER
             </Text>
             <Text type="h2" className="mb-4 sm:mb-16 text-center">
-              Vi tilbyr tjenester til bedrifer og privatpersoner
+              Tjenester for bedrifer og privatpersoner
             </Text>
           </div>
         </div>
         <EaseIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
             <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"shield"} size={"l"} />
               <Text type="h4" className="mb-2">
@@ -62,6 +62,17 @@ export function ConsultationSection() {
                 Mens Bitcoin mangler kundeservice, tilbyr Satoshi Consult førsteklasses support. Få
                 raske og pålitelige svar fra våre eksperter via møter, kryptert chat og
                 videokonferanser.
+              </Text>
+            </div>
+            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+              <Icon name={"presentation"} size={"l"} />
+              <Text type="h4" className="mb-2">
+                Foredrag
+              </Text>
+              <Text type="small" className="text-center sm:text-left">
+                Vi tilbyr tilpassede foredrag om Bitcoin og Lightning Network. Fra grunnleggende
+                konsepter til avanserte detaljer, gjør vi komplekse emner lett forståelige og
+                inspirerende for ditt team.
               </Text>
             </div>
           </div>

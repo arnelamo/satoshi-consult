@@ -24,11 +24,12 @@ export function HeroSection() {
           </Text>
           <Text type="normal" className="mb-7">
             Våre eksperter gir deg verktøyene du trenger for trygg oppbevaring og en vellykket
-            Bitcoin-strategi.
+            Bitcoin-strategi. Vi tilbyr 30 minutters gratis konsultasjon og rådgivning til bedrifter
+            og privatpersoner.
           </Text>
           <Link href={Paths.KONTAKT} passHref>
             <Button className="w-fit" size={"lg"} variant={"primary"}>
-              Book møte
+              Book gratis konsultasjon
             </Button>
           </Link>
         </div>
