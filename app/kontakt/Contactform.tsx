@@ -130,7 +130,7 @@ export function ContactForm() {
   return searchParams.has("confirmation") ? (
     <ConfirmationMessage />
   ) : (
-    <Section maxWidth="3xl">
+    <Section maxWidth="3xl" verticalPadding="small">
       <div className="space-y-4 mb-8">
         <Text type="h2">La oss høre fra deg</Text>
         <Text>
