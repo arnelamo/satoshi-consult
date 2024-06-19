@@ -17,9 +17,9 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation }) => (
   <footer className="border-t-[0.5px] border-muted">
     <div className="container py-10 max-w-6xl">
-      <div className="grid grid-cols-1 sm:grid-cols-3 items-center place-items-center">
-        <Image src={logo} alt={"Logo"} height={32} width={33} className="mb-8 sm:mb-0" />
-        <ul className="hidden sm:block sm:space-y-2">
+      <div className="grid grid-cols-3 sm:grid-cols-3 items-center place-items-center">
+        <Image src={logo} alt={"Logo"} height={32} width={33} />
+        {/* <ul className="hidden sm:block sm:space-y-2">
           {menuItems.map((item) => (
             <li key={item.name}>
               <Link href={item.href}>
@@ -37,23 +37,29 @@ export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation })
               </Text>
             </Link>
           ))}
+        </div> */}
+        <div className="mt-2">
+          <ModeToggle />
         </div>
-        <div className="flex flex-col space-y-8 sm:space-y-4">
-          <div className="flex space-x-8 justify-center">
-            {contactInformation?.nostr && (
-              <ExternalLink link={contactInformation.nostr}>
-                <Icon name="nostr" color="muted" hoverColor="foreground" size="s" />
-              </ExternalLink>
-            )}
-            {contactInformation?.twitter && (
-              <ExternalLink link={contactInformation.twitter}>
-                <Icon name="twitter" color="muted" hoverColor="foreground" size="s" />
-              </ExternalLink>
-            )}
-            <ModeToggle />
-          </div>
-          <Text type="small">2024 @ Satoshi Consult</Text>
+        {/* <div className="flex flex-col space-y-2 sm:space-y-4 mb-8 sm:mb-0"> */}
+        <div className="flex space-x-8 justify-center">
+          {contactInformation?.nostr && (
+            <ExternalLink link={contactInformation.nostr}>
+              <Icon name="nostr" color="muted" hoverColor="foreground" size="s" />
+            </ExternalLink>
+          )}
+          {contactInformation?.twitter && (
+            <ExternalLink link={contactInformation.twitter}>
+              <Icon name="twitter" color="muted" hoverColor="foreground" size="s" />
+            </ExternalLink>
+          )}
         </div>
+        {/* </div> */}
+      </div>
+    </div>
+    <div className="border-t-[0.5px] border-muted">
+      <div className="container py-4 max-w-6xl flex justify-center">
+        <Text type="small">2024 @ Satoshi Consult</Text>
       </div>
     </div>
   </footer>
