@@ -6,6 +6,8 @@ import { HeroSection } from "@/components/landingPage/HeroSection";
 import { KeynotesSection } from "@/components/landingPage/KeynotesSection";
 import { LightningSection } from "@/components/landingPage/LightningSection";
 import { TakeTheStepSection } from "@/components/landingPage/TakeTheStepSection";
+import ogImage from "@/public/opengraph-image.jpg";
+import twitterImage from "@/public/twitter-image.jpg";
 
 export const metadata: Metadata = {
   title: "Satoshi Comsult",
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: ogImage.src,
         width: 1200,
         height: 630,
         alt: "Satoshi Comsult Open Graph Image",
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     images: [
       {
-        url: "/twitter-image.jpg",
+        url: twitterImage.src,
         width: 1200,
         height: 630,
         alt: "Satoshi Comsult Twitter Image",
