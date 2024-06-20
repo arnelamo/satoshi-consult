@@ -6,6 +6,7 @@ export const Cart: React.FC<InternalIconProps> = ({
   fill,
   onMouseEnter,
   onMouseLeave,
+  altText,
 }) => (
   <svg
     height={height}
@@ -18,6 +19,7 @@ export const Cart: React.FC<InternalIconProps> = ({
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
+    <title>{altText}</title>
     <path
       d="M3 6H22L19 16H6L3 6ZM3 6L2.25 3.5"
       stroke={fill}

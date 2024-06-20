@@ -6,6 +6,7 @@ export const Presentation: React.FC<InternalIconProps> = ({
   fill,
   onMouseEnter,
   onMouseLeave,
+  altText,
 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -18,6 +19,7 @@ export const Presentation: React.FC<InternalIconProps> = ({
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
+    <title>{altText}</title>
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
