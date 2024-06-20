@@ -6,6 +6,7 @@ export const Info: React.FC<InternalIconProps> = ({
   fill,
   onMouseEnter,
   onMouseLeave,
+  altText,
 }) => (
   <svg
     height={height}
@@ -18,6 +19,7 @@ export const Info: React.FC<InternalIconProps> = ({
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
+    <title>{altText}</title>
     <path
       d="M12 11.5V16.5"
       stroke={fill}

@@ -24,7 +24,7 @@ export function ConsultationSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
             <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"shield"} size={"l"} />
-              <Text type="h4" className="mb-2">
+              <Text type="h3" className="mb-2">
                 Kald oppbevaring
               </Text>
               <Text type="small" className="text-center sm:text-left">
@@ -34,7 +34,7 @@ export function ConsultationSection() {
             </div>
             <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"briefcase"} size={"l"} />
-              <Text type="h4" className="mb-2">
+              <Text type="h3" className="mb-2">
                 Strategi
               </Text>
               <Text type="small" className="text-center sm:text-left">
@@ -44,7 +44,7 @@ export function ConsultationSection() {
             </div>
             <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"zap"} size={"l"} />
-              <Text type="h4" className="mb-2">
+              <Text type="h3" className="mb-2">
                 Lightning
               </Text>
               <Text type="small" className="text-center sm:text-left">
@@ -55,7 +55,7 @@ export function ConsultationSection() {
             </div>
             <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"service"} size={"l"} />
-              <Text type="h4" className="mb-2">
+              <Text type="h3" className="mb-2">
                 Kundeservice
               </Text>
               <Text type="small" className="text-center sm:text-left">
@@ -66,7 +66,7 @@ export function ConsultationSection() {
             </div>
             <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
               <Icon name={"presentation"} size={"l"} />
-              <Text type="h4" className="mb-2">
+              <Text type="h3" className="mb-2">
                 Foredrag
               </Text>
               <Text type="small" className="text-center sm:text-left">

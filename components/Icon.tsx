@@ -44,12 +44,14 @@ export interface InternalIconProps {
   height: number;
   width: number;
   fill: string;
+  altText: string;
 }
 export interface IconProps {
   size?: IconSize;
   color?: IconColor;
   name: IconName;
   hoverColor?: IconColor;
+  altText?: string;
 }
 export type IconSize = "s" | "m" | "l";
 
@@ -101,7 +103,7 @@ const colorMap: Record<IconColor, string> = {
   green: "hsl(var(--green))",
 };
 
-export const Icon: React.FC<IconProps> = ({ name, color, size, hoverColor }) => {
+export const Icon: React.FC<IconProps> = ({ name, color, size, hoverColor, altText = "icon" }) => {
   const [fill, setFill] = useState(colorMap[color || "foreground"]);
   const IconComponent = iconsMap[name];
   const sizeProps = iconSizeMap[size || "m"];
@@ -125,6 +127,7 @@ export const Icon: React.FC<IconProps> = ({ name, color, size, hoverColor }) => 
       fill={fill}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      altText={altText}
     />
   );
 };
