@@ -61,20 +61,28 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
           <li>
             {contactInformation?.nostr && (
               <ExternalLink link={contactInformation.nostr}>
-                <Icon name="nostr" color="muted" size="s" hoverColor="foreground" />
+                <Icon
+                  name="nostr"
+                  color="muted"
+                  size="s"
+                  hoverColor="foreground"
+                  altText="Nostr link"
+                />
               </ExternalLink>
             )}
           </li>
           <li>
             {contactInformation?.twitter && (
               <ExternalLink link={contactInformation.twitter}>
-                <Icon name="twitter" color="muted" size="s" />
+                <Icon name="twitter" color="muted" size="s" altText="Twitter/X link" />
               </ExternalLink>
             )}
           </li>
-          <Link href={Paths.KONTAKT} passHref>
-            <Button>Book nå</Button>
-          </Link>
+          <li>
+            <Link href={Paths.KONTAKT} passHref>
+              <Button>Book nå</Button>
+            </Link>
+          </li>
         </ul>
         {/* Hamburger Icon */}
         <button

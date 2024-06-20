@@ -42,12 +42,24 @@ export const Footer: React.FC<FooterProps> = ({ menuItems, contactInformation })
         <div className="flex space-x-8 justify-center">
           {contactInformation?.nostr && (
             <ExternalLink link={contactInformation.nostr}>
-              <Icon name="nostr" color="muted" hoverColor="foreground" size="s" />
+              <Icon
+                name="nostr"
+                color="muted"
+                hoverColor="foreground"
+                size="s"
+                altText="Nostr link"
+              />
             </ExternalLink>
           )}
           {contactInformation?.twitter && (
             <ExternalLink link={contactInformation.twitter}>
-              <Icon name="twitter" color="muted" hoverColor="foreground" size="s" />
+              <Icon
+                name="twitter"
+                color="muted"
+                hoverColor="foreground"
+                size="s"
+                altText="Twitter/X link"
+              />
             </ExternalLink>
           )}
         </div>
