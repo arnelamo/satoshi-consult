@@ -44,8 +44,6 @@ const emailJsContactTemplateId = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLAT
 const emailJsPublicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 const availableTimes = [
-  { label: "08:00-08:30", value: "08:00-08:30" },
-  { label: "08:30-09:00", value: "08:30-09:00" },
   { label: "09:00-09:30", value: "09:00-09:30" },
   { label: "09:30-10:00", value: "09:30-10:00" },
   { label: "10:00-10:30", value: "10:00-10:30" },
@@ -59,7 +57,6 @@ const availableTimes = [
   { label: "14:00-14:30", value: "14:00-14:30" },
   { label: "14:30-15:00", value: "14:30-15:00" },
   { label: "15:00-15:30", value: "15:00-15:30" },
-  { label: "15:30-16:00", value: "15:30-16:00" },
 ];
 
 const formSchema = z
