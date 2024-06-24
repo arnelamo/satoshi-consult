@@ -10,7 +10,7 @@ import ogImage from "@/public/opengraph-image.jpg";
 import twitterImage from "@/public/twitter-image.jpg";
 
 export const metadata: Metadata = {
-  title: "Satoshi Comsult",
+  title: "Satoshi Consult",
   description:
     "Satoshi Consult is a consulting firm that specializes in Bitcoin and Lightning network technology.",
   metadataBase: process.env.VERCEL_URL
