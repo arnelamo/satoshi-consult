@@ -9,10 +9,13 @@ import { TakeTheStepSection } from "@/components/landingPage/TakeTheStepSection"
 import ogImage from "@/public/opengraph-image.jpg";
 import twitterImage from "@/public/twitter-image.jpg";
 
+const someTitle = "Satoshi Consult";
+const someDescription =
+  "Satoshi Consult is a consulting firm that specializes in Bitcoin and Lightning network technology.";
+
 export const metadata: Metadata = {
-  title: "Satoshi Consult",
-  description:
-    "Satoshi Consult is a consulting firm that specializes in Bitcoin and Lightning network technology.",
+  title: someTitle,
+  description: someDescription,
   metadataBase: process.env.VERCEL_URL
     ? new URL(`https://www.satoshiconsult.com`)
     : new URL(`http://localhost:${process.env.PORT || 3000}`),
@@ -20,6 +23,8 @@ export const metadata: Metadata = {
     canonical: "./",
   },
   openGraph: {
+    title: someTitle,
+    description: someDescription,
     url: "https://www.satoshiconsult.com",
     type: "website",
     images: [
@@ -32,6 +37,11 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
+    title: "Satoshi Consult",
+    description:
+      "Satoshi Consult is a consulting firm that specializes in Bitcoin and Lightning network technology.",
+    card: "summary_large_image",
+    creator: "@SatoshiConsult",
     images: [
       {
         url: twitterImage.src,
