@@ -16,8 +16,11 @@ export const metadata: Metadata = {
   metadataBase: process.env.VERCEL_URL
     ? new URL(`https://www.satoshiconsult.com`)
     : new URL(`http://localhost:${process.env.PORT || 3000}`),
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
-    url: "https://satoshiconsult.com",
+    url: "https://www.satoshiconsult.com",
     type: "website",
     images: [
       {
