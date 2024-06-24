@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Satoshi Consult is a consulting firm that specializes in Bitcoin and Lightning network technology.",
   metadataBase: process.env.VERCEL_URL
-    ? new URL(`https://satoshi-consult.vercel.app/`)
+    ? new URL(`https://satoshiconsult.com`)
     : new URL(`http://localhost:${process.env.PORT || 3000}`),
   openGraph: {
     url: "https://satoshiconsult.com",
