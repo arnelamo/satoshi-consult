@@ -37,19 +37,15 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "Satoshi Consult",
-    description:
-      "Satoshi Consult is a consulting firm that specializes in Bitcoin and Lightning network technology.",
+    title: someTitle,
+    description: someDescription,
     card: "summary_large_image",
+    site: "@SatoshiConsult",
     creator: "@SatoshiConsult",
-    images: [
-      {
-        url: twitterImage.src,
-        width: 1200,
-        height: 630,
-        alt: "Satoshi Comsult Twitter Image",
-      },
-    ],
+    images: {
+      url: twitterImage.src,
+      alt: "Satoshi Comsult Twitter Image",
+    },
   },
 };
 
