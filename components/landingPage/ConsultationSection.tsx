@@ -22,7 +22,7 @@ export function ConsultationSection() {
         </div>
         <EaseIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+            <div className="flex flex-col items-center sm:items-start space-y-4">
               <Icon name={"shield"} size={"l"} />
               <Text type="h3" className="mb-2">
                 Kald oppbevaring
@@ -32,7 +32,7 @@ export function ConsultationSection() {
                 tilbyr multisig-løsninger og personlig veiledning for ekstra sikkerhet og ro.
               </Text>
             </div>
-            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+            <div className="flex flex-col items-center sm:items-start space-y-4">
               <Icon name={"briefcase"} size={"l"} />
               <Text type="h3" className="mb-2">
                 Strategi
@@ -42,7 +42,7 @@ export function ConsultationSection() {
                 skatt, regnskap, sikkerhet og styrets støtte.
               </Text>
             </div>
-            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+            <div className="flex flex-col items-center sm:items-start space-y-4">
               <Icon name={"zap"} size={"l"} />
               <Text type="h3" className="mb-2">
                 Lightning
@@ -53,7 +53,7 @@ export function ConsultationSection() {
                 dine midler
               </Text>
             </div>
-            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+            <div className="flex flex-col items-center sm:items-start space-y-4">
               <Icon name={"service"} size={"l"} />
               <Text type="h3" className="mb-2">
                 Kundeservice
@@ -64,7 +64,7 @@ export function ConsultationSection() {
                 videokonferanser.
               </Text>
             </div>
-            <div className="flex flex-col items-center sm:items-start space-y-4 sm:space-y-8">
+            <div className="flex flex-col items-center sm:items-start space-y-4">
               <Icon name={"presentation"} size={"l"} />
               <Text type="h3" className="mb-2">
                 Foredrag

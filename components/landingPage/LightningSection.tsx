@@ -26,10 +26,10 @@ export function LightningSection() {
           </div>
         </EaseIn>
         <div className="flex flex-col items-center md:items-start mb-16 md:mb-0">
-          <Text type="h2" className="mb-8">
+          <Text type="h2" className="text-center sm:text-left mb-8">
             Onboarding til Bitcoin Lightning Network
           </Text>
-          <Text type="large" className="mb-8">
+          <Text type="large" className="text-center sm:text-left mb-8">
             Øk kundebasen din med lynraske betalinger via Lightning Network!
           </Text>
 

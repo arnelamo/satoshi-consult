@@ -15,10 +15,10 @@ export function KeynotesSection() {
           className="flex flex-col md:max-w-[5
         600px] items-center md:items-start mb-16 md:mb-0"
         >
-          <Text type="h2" className="mb-8 max-w-[500px]">
+          <Text type="h2" className="text-center sm:text-left mb-8 max-w-[500px]">
             Foredrag, keynotes og workshops
           </Text>
-          <Text type="large">
+          <Text type="large" className="text-center sm:text-left">
             Vi tilbyr skreddersydde foredrag om Bitcoin og Lightning Network, tilpasset deres behov.
             Vi dekker alt fra grunnleggende konsepter til komplekse detaljer, inspirerer og
             informerer. Vi gjør avanserte og detaljerte emner lett tilgjengelige for ditt team.

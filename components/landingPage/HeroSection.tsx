@@ -16,13 +16,13 @@ export function HeroSection() {
     <Section>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
         <div className="flex flex-col md:max-w-[500px] items-center md:items-start mb-16 md:mb-0">
-          <Text type="postTitle" className="mb-2">
+          <Text type="postTitle" className="text-center sm:text-left mb-2">
             Bedre kunnskap. Tryggere investeringer.
           </Text>
-          <Text type="h1" className="mb-4">
+          <Text type="h1" className="text-center sm:text-left mb-4">
             Ekspertise på Bitcoin, for alle.
           </Text>
-          <Text type="normal" className="mb-7">
+          <Text type="normal" className="text-center sm:text-left mb-7">
             Våre eksperter gir deg verktøyene du trenger for trygg oppbevaring og en vellykket
             Bitcoin-strategi. Vi tilbyr 30 minutters gratis konsultasjon og rådgivning til bedrifter
             og privatpersoner.

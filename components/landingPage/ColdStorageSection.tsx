@@ -13,12 +13,12 @@ export function ColdStorageSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center">
         <div
           className="flex flex-col md:max-w-[5
-            600px] items-center md:items-start mb-16 md:mb-0"
+            600px] items-center sm:items-start mb-4 md:mb-0"
         >
-          <Text type="h2" className="mb-8 max-w-[500px]">
+          <Text type="h2" className="text-center sm:text-left mb-8 max-w-[500px]">
             Kald oppbevaring - sov godt om natten
           </Text>
-          <Text type="large">
+          <Text type="large" className="text-center sm:text-left">
             Vi tilbyr krypterte videokonferanser, hjemmebesøk, eller møter på nøytral plass. Ved
             bruk av multisig-løsninger, som krever to av tre nøkler, sikrer vi dine verdier mot
             hacking. Med ekstra trygghet sover du godt om natten.
