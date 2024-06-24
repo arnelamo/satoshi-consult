@@ -110,7 +110,7 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
       </nav>
       {/* Mobile Menu */}
       <nav
-        className={`fixed flex flex-col top-0 left-0 w-full p-10 z-10 h-screen pt-24 bg-white bg-opacity-100 transform delay-100 transition-all duration-200 ${
+        className={`fixed flex flex-col top-0 left-0 w-full p-10 z-10 h-screen pt-24 bg-background bg-opacity-100 transform delay-100 transition-all duration-200 ${
           isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
         }`}
       >
