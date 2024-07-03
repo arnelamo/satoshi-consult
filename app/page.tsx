@@ -44,8 +44,6 @@ export const metadata: Metadata = {
     creator: "@SatoshiConsult",
     images: {
       url: twitterImage.src,
-      width: 1200,
-      height: 630,
       alt: "Satoshi Comsult Twitter Image",
     },
   },
